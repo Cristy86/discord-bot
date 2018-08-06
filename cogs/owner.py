@@ -94,7 +94,7 @@ class Owner:
     @commands.command(name="ping")
     async def _ping(self, ctx):
         """Returns with pong."""
-        await ctx.send(f"Pong. **`{round(bot.latency * 1000)}ms.`**")
+        await ctx.send(f"Pong. **`{round(self.bot.latency * 1000)}ms.`**")
 
         
 def setup(bot):

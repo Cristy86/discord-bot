@@ -92,7 +92,7 @@ class Owner:
         await self.bot.logout()
 
     @commands.command(name="ping")
-    async def _pings(self, ctx):
+    async def _ping(self, ctx):
         """Returns with pong."""
         await ctx.send(f"Pong. **`{round(bot.latency * 1000)}ms.`**")
 

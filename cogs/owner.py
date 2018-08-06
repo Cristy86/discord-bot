@@ -91,6 +91,11 @@ class Owner:
         await ctx.send(f"<{SUCCESS_EMOJI}> **`Goodbye.`**")
         await self.bot.logout()
 
+    @commands.command(name="ping")
+    async def _pings(self, ctx):
+        """Returns with pong."""
+        await ctx.send(f"Pong. **`{round(bot.latency * 1000)}ms.`**")
 
+        
 def setup(bot):
     bot.add_cog(Owner(bot))

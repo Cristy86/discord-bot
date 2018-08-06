@@ -2,4 +2,3 @@
 aiohttp
 websockets
 sys
--e git+https://github.com/gorialis/jishaku

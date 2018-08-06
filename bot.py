@@ -6,7 +6,7 @@ import datetime
 import os
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('~~'), description="\uFEFF")
-initial_extensions = ['cogs.owner','cogs.eh','jishaku','cogs.misc']
+initial_extensions = ['cogs.owner','cogs.eh','cogs.misc']
 
 @bot.event
 async def on_ready():

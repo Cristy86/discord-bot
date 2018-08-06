@@ -1,4 +1,4 @@
-from utils.constants import SUCCESS_EMOJI, WRONG_EMOJI
+
 from discord.ext import commands
 import discord
 import asyncio

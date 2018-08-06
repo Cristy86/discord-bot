@@ -3,7 +3,7 @@ import discord
 import asyncio
 import datetime
 import os
-import praw
+import praw, random
 from utils.constants import BLURPLE_COLOR
 
 class API:

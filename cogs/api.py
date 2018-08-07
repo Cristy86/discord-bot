@@ -35,9 +35,9 @@ class API:
     async def ask(self, ctx, *, question: str):
         """Uses cleverbot.io to talk with you."""
         params = {
-			"user": os.getenv('API_USER'),
-			"key": os.getenv('API_KEY'),
-			"nick": os.getenv('API_NICK'),
+			"user": os.getenv('CHATBOT_API_USER'),
+			"key": os.getenv('CHATBOT_API_KEY'),
+			"nick": os.getenv('CHATBOT_API_NICK'),
 			"text": question
 		}
         async with ctx.typing():

@@ -2,4 +2,4 @@
 aiohttp
 websockets
 praw
--e git+https://github.com/Gorialis/jishaku@master
+-e git+https://github.com/Gorialis/jishaku@master#egg=jishaku

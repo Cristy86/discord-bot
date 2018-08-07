@@ -42,9 +42,9 @@ class API:
 		}
         async with ctx.typing():
             async with aiohttp.ClientSession() as session:
-                async with session.post("https://cleverbot.io/1.0/ask", data=params) as cs:
+                async with session.post("https://cleverbot.io/1.0/create", data=params) as cs:
                     data = await cs.json()
-                    result = data["response"]
+                    result = data
                     await ctx.send(f"**`{result}`**")
 
 

@@ -22,9 +22,7 @@ class API:
             submission = next(x for x in memes_submissions if not x.stickied)
         return submission.url
 
-    @commands.command(pass_context=True)
-    @commands.guild_only()
-    @commands.cooldown(1.0, 20.0, commands.BucketType.user)
+    @commands.command()
     async def meme(self, ctx):
         """Generates a random meme from reddit."""
         async with ctx.typing():
@@ -32,6 +30,23 @@ class API:
             embed = discord.Embed(color=BLURPLE_COLOR)
             embed.set_image(url=b)
             await ctx.send(embed=embed)
+	
+	@commands.command()
+    async def ask(self, ctx, *, question: str):
+        """Uses cleverbot.io to talk with you."""
+        params = {
+			"user": os.getenv('API_USER'),
+			"key": os.getenv('API_KEY'),
+			"nick": os.getenv('API_NICK'),
+			"text": question
+		}
+        async with ctx.typing():
+            async with aiohttp.ClientSession() as session:
+                async with session.post("https://cleverbot.io/1.0/ask", data=params) as cs:
+                    data = await cs.json()
+                    result = data["response"]
+                    await ctx.send(f"**`{result}`**")
+
 
 def setup(bot):
     bot.add_cog(API(bot))

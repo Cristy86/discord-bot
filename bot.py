@@ -5,7 +5,7 @@ import datetime
 import os
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('~~'), description="\uFEFF")
-initial_extensions = ['cogs.owner','cogs.eh','jishaku','cogs.misc','cogs.api']
+initial_extensions = ['cogs.owner','cogs.eh','cogs.misc','cogs.api']
 BOT_LAUNCH_TIME = datetime.datetime.utcnow()
 
 @bot.event

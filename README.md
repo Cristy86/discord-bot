@@ -1,4 +1,4 @@
-# <img src="https://cdn.discordapp.com/embed/avatars/0.png" width="100">discord-bot
+# discord-bot
 A bot that's hosted on heroku.
 
 # Why heroku?
